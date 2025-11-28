@@ -5,9 +5,9 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa'
 
 const Hero = () => {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FaGithub, href: 'https://github.com/KulanyaLisaldi', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kulanya-lisaldi-aa39a9293/', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:kulanya.lisaldi@gmail.com', label: 'Email' },
   ]
 
   const scrollToSection = (sectionId: string) => {
@@ -35,13 +35,8 @@ const Hero = () => {
             <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-gray-600 shadow-lg">
               <img
                 src="/profile.jpg"
-                alt="Profile"
+                alt="Kulanya Lisaldi"
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback to a placeholder if image doesn't exist
-                  const target = e.target as HTMLImageElement
-                  target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Crect fill="%239333ea" width="200" height="200"/%3E%3Ctext fill="white" font-family="Arial" font-size="80" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3EYN%3C/text%3E%3C/svg%3E'
-                }}
               />
             </div>
           </div>
@@ -49,18 +44,18 @@ const Hero = () => {
           {/* Greeting */}
           <div className="mb-4 animate-fade-in">
             <span className="text-blue-400 text-lg md:text-xl font-medium">
-              Hi, my name is
+              Hi, It's me
             </span>
           </div>
 
           {/* Name */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up text-white">
-            Your Name
+            Kulanya Lisaldi
           </h1>
 
           {/* Title */}
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 animate-fade-in-up delay-200">
-            I'm a Full Stack Developer
+            I'm Undergraduate Student at University of SLIIT
           </h2>
 
           {/* Description */}
