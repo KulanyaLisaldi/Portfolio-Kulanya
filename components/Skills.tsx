@@ -1,37 +1,25 @@
 import React from 'react'
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'Tailwind CSS', level: 90 },
-        { name: 'JavaScript', level: 85 },
-      ],
-    },
-    {
-      category: 'Backend',
-      skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Express', level: 75 },
-        { name: 'Python', level: 70 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'PostgreSQL', level: 70 },
-      ],
-    },
-    {
-      category: 'Tools & Others',
-      skills: [
-        { name: 'Git', level: 85 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'Figma', level: 75 },
-        { name: 'CI/CD', level: 70 },
-      ],
-    },
+  const skills = [
+    'Java',
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Node.js',
+    'Express.js',
+    'Next.js',
+    'HTML',
+    'CSS',
+    'Statistics',
+    'Git',
+    'GitHub',
+    'MySQL',
+    'MongoDB',
+    'Redis',
+    'Postman',
+    'R Programming',
   ]
 
   return (
@@ -45,42 +33,17 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Skills & Technologies
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Technologies and tools I work with to bring ideas to life
-          </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={categoryIndex}
-              className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700"
+        {/* Skills Tags */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+          {skills.map((skill, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 md:px-6 md:py-3 bg-black text-white rounded-lg text-sm md:text-base font-medium hover:bg-gray-900 transition-colors duration-200"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6 text-center">
-                {category.category}
-              </h3>
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300 font-medium">
-                        {skill.name}
-                      </span>
-                      <span className="text-gray-400 text-sm">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2.5">
-                      <div
-                        className="bg-gray-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              {skill}
+            </span>
           ))}
         </div>
       </div>
@@ -89,4 +52,3 @@ const Skills = () => {
 }
 
 export default Skills
-

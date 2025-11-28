@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FaGithub, href: 'https://github.com/KulanyaLisaldi', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/kulanya-lisaldi-aa39a9293/', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:kulanya.lisaldi@gmail.com', label: 'Email' },
   ]
 
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
           <div className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Kulanya Lisaldi. All rights reserved.
           </div>
 
           {/* Social Links */}
@@ -33,10 +33,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Made with */}
-          <div className="text-gray-400 text-sm">
-            Made with <span className="text-red-500">♥</span> using Next.js
-          </div>
         </div>
       </div>
     </footer>

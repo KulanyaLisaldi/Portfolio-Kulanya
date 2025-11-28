@@ -9,6 +9,12 @@ const Contact = () => {
     email: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  // Replace with your Formspree form endpoint
+  // Get it from https://formspree.io/ after creating a form
+  const formspreeEndpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/myzaldnl'
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,32 +25,60 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I will get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email, // This sets the reply-to address
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setSubmitStatus('idle'), 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Email sending failed:', error)
+      setSubmitStatus('error')
+      setTimeout(() => setSubmitStatus('idle'), 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      value: 'kulanya.lisaldi@gmail.com',
+      link: 'mailto:kulanya.lisaldi@gmail.com',
     },
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+1 (234) 567-8900',
-      link: 'tel:+12345678900',
+      value: '+94 70 153 6490',
+      link: 'tel:+94701536490',
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'Your City, Country',
-      link: '#',
+      value: 'Malabe, Sri Lanka',
+      link: '253/f, udaya mawatha, malabe',
     },
   ]
 
@@ -72,11 +106,7 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold text-white mb-4">
                 Let's Connect
               </h3>
-              <p className="text-gray-400 leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, or
-                opportunities to be part of your visions. Feel free to reach out
-                through any of the channels below.
-              </p>
+             
             </div>
 
             <div className="space-y-4">
@@ -160,11 +190,24 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg font-semibold hover:bg-gray-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full px-8 py-3 bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg font-semibold hover:bg-gray-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <FaEnvelope className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               </button>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm text-center">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm text-center">
+                  Failed to send message. Please try again or contact me directly at kulanya.lisaldi@gmail.com
+                </div>
+              )}
             </form>
           </div>
         </div>
