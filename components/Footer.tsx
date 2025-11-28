@@ -1,11 +1,10 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
     { icon: FaEnvelope, href: 'mailto:your.email@example.com', label: 'Email' },
   ]
 
@@ -27,7 +26,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-gray-400 hover:text-purple-400 transition-colors duration-300 transform hover:scale-110"
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <social.icon className="w-5 h-5" />
               </a>

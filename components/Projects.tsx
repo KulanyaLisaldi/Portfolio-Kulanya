@@ -67,12 +67,9 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+            Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             A collection of projects I've worked on, showcasing my skills and
             experience
@@ -84,10 +81,10 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 group"
             >
               {/* Project Image/Icon */}
-              <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center text-6xl">
+              <div className="h-48 bg-gray-800/50 flex items-center justify-center text-6xl">
                 {project.image}
               </div>
 
@@ -118,7 +115,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors"
+                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                   >
                     <FaGithub className="w-5 h-5" />
                     <span className="text-sm">Code</span>
@@ -127,7 +124,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors"
+                    className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                   >
                     <FaExternalLinkAlt className="w-5 h-5" />
                     <span className="text-sm">Live Demo</span>

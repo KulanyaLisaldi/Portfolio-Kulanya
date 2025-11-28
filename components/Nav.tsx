@@ -47,7 +47,7 @@ const Nav = () => {
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent"
+              className="text-2xl md:text-3xl font-bold text-gray-300 hover:text-white transition-colors duration-200"
             >
               Portfolio
             </a>

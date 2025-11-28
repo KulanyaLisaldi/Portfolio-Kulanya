@@ -28,12 +28,9 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              About Me
-            </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+            About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -63,11 +60,11 @@ const About = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>

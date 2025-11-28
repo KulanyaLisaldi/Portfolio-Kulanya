@@ -42,12 +42,9 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              Skills & Technologies
-            </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+            Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
@@ -76,7 +73,7 @@ const Skills = () => {
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2.5">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2.5 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gray-500 h-2.5 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

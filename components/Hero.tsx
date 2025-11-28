@@ -1,13 +1,12 @@
 'use client'
 
 import React from 'react'
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa'
 
 const Hero = () => {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
     { icon: FaEnvelope, href: 'mailto:your.email@example.com', label: 'Email' },
   ]
 
@@ -31,6 +30,22 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
+          {/* Profile Image */}
+          <div className="mb-8 animate-fade-in flex justify-center">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-gray-600 shadow-lg">
+              <img
+                src="/profile.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to a placeholder if image doesn't exist
+                  const target = e.target as HTMLImageElement
+                  target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Crect fill="%239333ea" width="200" height="200"/%3E%3Ctext fill="white" font-family="Arial" font-size="80" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3EYN%3C/text%3E%3C/svg%3E'
+                }}
+              />
+            </div>
+          </div>
+
           {/* Greeting */}
           <div className="mb-4 animate-fade-in">
             <span className="text-blue-400 text-lg md:text-xl font-medium">
@@ -39,18 +54,13 @@ const Hero = () => {
           </div>
 
           {/* Name */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Your Name
-            </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up text-white">
+            Your Name
           </h1>
 
           {/* Title */}
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-gray-300 mb-6 animate-fade-in-up delay-200">
-            I'm a{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Full Stack Developer
-            </span>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 animate-fade-in-up delay-200">
+            I'm a Full Stack Developer
           </h2>
 
           {/* Description */}
@@ -63,13 +73,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-600">
             <button
               onClick={() => scrollToSection('#projects')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg font-semibold hover:bg-gray-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               View My Work
             </button>
             <button
               onClick={() => scrollToSection('#contact')}
-              className="px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
+              className="px-8 py-3 bg-transparent border-2 border-gray-400 text-gray-400 rounded-lg font-semibold hover:bg-gray-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               Get In Touch
             </button>
@@ -84,7 +94,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-gray-400 hover:text-purple-400 transition-colors duration-300 transform hover:scale-110"
+                className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-110"
               >
                 <social.icon className="w-6 h-6 md:w-7 md:h-7" />
               </a>
@@ -95,7 +105,7 @@ const Hero = () => {
           <div className="animate-bounce">
             <button
               onClick={() => scrollToSection('#about')}
-              className="text-gray-400 hover:text-purple-400 transition-colors"
+              className="text-gray-400 hover:text-white transition-colors"
               aria-label="Scroll to about"
             >
               <FaArrowDown className="w-8 h-8 mx-auto" />
