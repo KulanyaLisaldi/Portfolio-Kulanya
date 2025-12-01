@@ -31,31 +31,13 @@ const Projects = () => {
       github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'MediCare',
-      Date: 'Aug 2025 - Oct 2025',
+      title: 'PharmacyX',
+      Date: 'Sep 2024 - Oct 2024',
       description:
-        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
-      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
-      image: '/medicare.png',
-      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
-    },
-    {
-      title: 'MediCare',
-      Date: 'Aug 2025 - Oct 2025',
-      description:
-        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
-      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
-      image: '/medicare.png',
-      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
-    },
-    {
-      title: 'MediCare',
-      Date: 'Aug 2025 - Oct 2025',
-      description:
-        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
-      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
-      image: '/medicare.png',
-      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
+        'PharmacyX is an online pharmacy system for browsing medications, uploading prescriptions, and managing orders. Built with HTML, CSS, JavaScript, PHP, and MySQL.',
+      technologies: ['PHP', 'HTML', 'CSS', 'MySQL', 'JavaScript', 'Git'],
+      image: '/pharmacyx.png',
+      github: 'https://github.com/KulanyaLisaldi/Online_Pharmacy_Portal',
     },
   ]
 
