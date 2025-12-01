@@ -4,58 +4,58 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: '🛒',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'Task Management App',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'A collaborative task management application with real-time updates and team collaboration features.',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io'],
-      image: '📋',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'Weather Dashboard',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'A beautiful weather dashboard with location-based forecasts and interactive maps.',
-      technologies: ['React', 'Chart.js', 'OpenWeather API'],
-      image: '🌤️',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'Social Media Analytics',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'Analytics platform for social media metrics with data visualization and reporting.',
-      technologies: ['Vue.js', 'Python', 'D3.js', 'PostgreSQL'],
-      image: '📊',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'Portfolio Website',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'A modern, responsive portfolio website showcasing projects and skills.',
-      technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-      image: '💼',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'Chat Application',
+      title: 'MediCare',
+      Date: 'Aug 2025 - Oct 2025',
       description:
-        'Real-time chat application with multiple rooms, file sharing, and emoji support.',
-      technologies: ['React', 'Socket.io', 'Express', 'MongoDB'],
-      image: '💬',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+      image: '/medicare.png',
+      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
   ]
 
@@ -84,15 +84,23 @@ const Projects = () => {
               className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 overflow-hidden hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105 group"
             >
               {/* Project Image/Icon */}
-              <div className="h-48 bg-gray-800/50 flex items-center justify-center text-6xl">
-                {project.image}
-              </div>
+              <div className="h-48 bg-gray-800/50 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                   />
+                </div>
+
 
               {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
+                <p className="text-gray-500 text-xs mb-2">
+                  {project.Date}
+                </p>
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
@@ -118,9 +126,9 @@ const Projects = () => {
                     className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                   >
                     <FaGithub className="w-5 h-5" />
-                    <span className="text-sm">Code</span>
+                    <span className="text-sm">Source</span>
                   </a>
-                  <a
+                  {/*<a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -128,7 +136,7 @@ const Projects = () => {
                   >
                     <FaExternalLinkAlt className="w-5 h-5" />
                     <span className="text-sm">Live Demo</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
