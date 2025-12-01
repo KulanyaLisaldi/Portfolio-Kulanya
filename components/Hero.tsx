@@ -55,13 +55,12 @@ const Hero = () => {
 
           {/* Title */}
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 animate-fade-in-up delay-200">
-            I'm Undergraduate Student at University of SLIIT
+            I'm Data Science Undergraduate at SLIIT
           </h2>
 
           {/* Description */}
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up delay-400">
-            I create beautiful and functional web experiences. Passionate about
-            clean code, modern design, and bringing ideas to life.
+            I work with data analytics, machine learning, and modern web technologies to solve real-world problems through intelligent solutions.
           </p>
 
           {/* CTA Buttons */}
