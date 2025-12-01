@@ -4,13 +4,13 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
-      title: 'MediCare',
-      Date: 'Aug 2025 - Oct 2025',
+      title: 'Portfolio Website',
+      Date: 'Nov 2025 - Dec 2025',
       description:
-        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
-      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
+        'This is my personal portfolio website created to present my skills, academic projects, and achievements as an IT undergraduate. The website is built with TypeScript and Next.js, featuring a modern and responsive design.',
+      technologies: ['TypeScript', 'Next.js', 'CSS', 'Git'],
       image: '/medicare.png',
-      github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
+      github: 'https://github.com/KulanyaLisaldi/Portfolio-Kulanya',
     },
     {
       title: 'MediCare',

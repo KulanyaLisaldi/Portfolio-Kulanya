@@ -1,22 +1,21 @@
 import React from 'react'
-import { FaCode, FaPalette, FaRocket } from 'react-icons/fa'
+import Image from 'next/image'
 
 const About = () => {
-  const features = [
+  const educationItems = [
     {
-      icon: FaCode,
-      title: 'Clean Code',
-      description: 'Writing maintainable and scalable code following best practices.',
+       // replace with your institute logo path in /public
+      institute: 'SLIIT',
+      description:
+        'BSc (Hons) in Information Technology specialising in Data Science.',
+      date: '2023 – Present',
     },
     {
-      icon: FaPalette,
-      title: 'Modern Design',
-      description: 'Creating beautiful and intuitive user interfaces that users love.',
-    },
-    {
-      icon: FaRocket,
-      title: 'Performance',
-      description: 'Building fast and optimized applications for the best user experience.',
+       // update with your school/college badge
+      institute: 'St. Mary\'s Convent, Matara',
+      description:
+        'GCE Advanced Level – Physical Science (Mathematics, Physics, Chemistry).',
+      date: '2009 – 2022',
     },
   ]
 
@@ -37,46 +36,45 @@ const About = () => {
           {/* Left Side - Text Content */}
           <div className="space-y-6">
             <p className="text-gray-300 text-lg leading-relaxed">
-              I'm a passionate developer with a love for creating digital
-              experiences that make a difference. With expertise in modern web
-              technologies, I bring ideas to life through clean code and
-              thoughtful design.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              My journey in web development started with curiosity and has grown
-              into a career focused on building applications that are both
-              beautiful and functional. I believe in continuous learning and
-              staying up-to-date with the latest technologies and best practices.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing knowledge with
-              the developer community.
+              I'm Kulanya Lisaldi, an undergraduate student at SLIIT specializing in Data Science.
+              I’m passionate about exploring data-driven insights, machine learning concepts, and modern web development. 
+              I enjoy creating intuitive, clean, and user-focused digital experiences. 
+              My goal is to combine data, creativity, and technology to solve real-world problems and continue evolving as a developer.
             </p>
           </div>
 
-          {/* Right Side - Features Grid */}
-          <div className="grid gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                      <feature.icon className="w-6 h-6 text-white" />
+          {/* Right Side - Education Card */}
+          <div className="flex justify-center md:justify-end">
+            <div className="max-w-xl w-full bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-6">
+                Education
+              </h3>
+
+              <div className="space-y-6">
+                {educationItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col sm:flex-row sm:items-center md:items-start sm:justify-between gap-4 sm:gap-6 border border-transparent border-b-gray-800/60 pb-6 last:pb-0 last:border-none"
+                  >
+                    <div className="flex items-center sm:items-start gap-4">
+                      
+                      <div>
+                        <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white">
+                          {item.institute}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                          {item.date}
+                        </p>
+                      </div>
                     </div>
+
+                    <p className="text-gray-400 text-sm leading-relaxed text-center sm:text-left md:text-right md:text-base md:max-w-xs">
+                      {item.description}
+                    </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400">{feature.description}</p>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
