@@ -9,7 +9,7 @@ const Projects = () => {
       description:
         'This is my personal portfolio website created to present my skills, academic projects, and achievements as an IT undergraduate. The website is built with TypeScript and Next.js, featuring a modern and responsive design.',
       technologies: ['TypeScript', 'Next.js', 'CSS', 'Git'],
-      image: '/medicare.png',
+      image: '/portfolio.png',
       github: 'https://github.com/KulanyaLisaldi/Portfolio-Kulanya',
     },
     {
@@ -22,12 +22,12 @@ const Projects = () => {
       github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {
-      title: 'MediCare',
-      Date: 'Aug 2025 - Oct 2025',
+      title: 'eRemedy',
+      Date: 'Mar 2025 - May 2025',
       description:
-        'MediCare is a full-stack online pharmacy and channeling management system that helps users easily buy medicines, book doctors, upload prescriptions, and track deliveries.',
-      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git'],
-      image: '/medicare.png',
+        'eRemedy is a Java based online medicine ordering system. The platform allows customers to browse medicines, add items to cart, and place orders. Built as an Eclipse project with a MySQL database backend.',
+      technologies: ['Java', 'MySQL', 'Eclipse', 'Git','HTML', 'Bootstrap', 'JavaScript'],
+      image: '/eremedy.png',
       github: 'https://github.com/KulanyaLisaldi/Medicare_Pharmacy_ITP_W200',
     },
     {

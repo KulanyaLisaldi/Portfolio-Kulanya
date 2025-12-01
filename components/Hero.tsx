@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="text-center">
           {/* Profile Image */}
           <div className="mb-8 animate-fade-in flex justify-center">
-            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-gray-600 shadow-lg">
+            <div className="relative w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden border-4 border-gray-600 shadow-lg ">
               <img
                 src="/profile.jpg"
                 alt="Kulanya Lisaldi"
