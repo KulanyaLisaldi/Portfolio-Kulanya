@@ -60,7 +60,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up delay-400">
-            I work with data analytics, machine learning, and modern web technologies to solve real-world problems through intelligent solutions.
+           Passionate about data analysis, machine learning, statistics, and modern web technologies. Eager to build innovative, real-world solutions through web and mobile application development.
           </p>
 
           {/* CTA Buttons */}

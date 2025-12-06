@@ -41,6 +41,11 @@ const About = () => {
               I enjoy creating intuitive, clean, and user-focused digital experiences. 
               My goal is to combine data, creativity, and technology to solve real-world problems and continue evolving as a developer.
             </p>
+
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Beyond data science, I have hands-on experience in full-stack web development, backend systems, frontend design, and mobile application development. 
+              This allows me to create end-to-end solutions that are both data-driven and user-focused, delivering seamless, scalable, and impactful digital experiences.
+            </p>
           </div>
 
           {/* Right Side - Education Card */}
