@@ -58,25 +58,17 @@ const Skills = () => {
             <div className="bg-black/60 border border-gray-800 rounded-xl p-4 md:p-5 text-white flex flex-col">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="font-semibold text-lg">Your Certificate Name</p>
-                  <p className="text-sm text-gray-300">Issuing Organization</p>
-                  <p className="text-xs text-gray-400 mt-1">Month Year</p>
+                  <p className="font-semibold text-lg">Python for Beginners</p>
+                  <p className="text-sm text-gray-300">University of Moratuwa</p>
+                  <p className="text-xs text-gray-400 mt-1">2025 December</p>
                 </div>
 
                 <div className="flex flex-row items-start justify-end gap-2">
                   {/* Verify link (e.g., credential ID / verification URL) */}
-                  <a
-                    href="https://example.com/verify"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-600 hover:bg-emerald-500 transition-colors whitespace-nowrap"
-                  >
-                    Verify
-                  </a>
-
+                  
                   {/* View certificate (PDF / image / site) */}
                   <a
-                    href="https://example.com/certificate"
+                    href="https://open.uom.lk/lms/mod/customcert/view.php?id=675&downloadown=1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-1.5 rounded-lg text-xs font-medium border border-gray-600 hover:bg-gray-800 transition-colors whitespace-nowrap"
