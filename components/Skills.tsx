@@ -46,6 +46,80 @@ const Skills = () => {
             </span>
           ))}
         </div>
+
+        {/* Certificates */}
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-white text-center">
+            Certificates
+          </h3>
+
+          <div className="w-full mx-auto grid gap-4 grid-cols-1">
+            {/* Example certificate card – replace with your real certificate details */}
+            <div className="bg-black/60 border border-gray-800 rounded-xl p-4 md:p-5 text-white flex flex-col">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-semibold text-lg">Your Certificate Name</p>
+                  <p className="text-sm text-gray-300">Issuing Organization</p>
+                  <p className="text-xs text-gray-400 mt-1">Month Year</p>
+                </div>
+
+                <div className="flex flex-row items-start justify-end gap-2">
+                  {/* Verify link (e.g., credential ID / verification URL) */}
+                  <a
+                    href="https://example.com/verify"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-600 hover:bg-emerald-500 transition-colors whitespace-nowrap"
+                  >
+                    Verify
+                  </a>
+
+                  {/* View certificate (PDF / image / site) */}
+                  <a
+                    href="https://example.com/certificate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium border border-gray-600 hover:bg-gray-800 transition-colors whitespace-nowrap"
+                  >
+                    View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Duplicate and edit this block for more certificates */}
+            {/*
+            <div className="bg-black/60 border border-gray-800 rounded-xl p-4 md:p-5 text-white flex flex-col">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-semibold text-lg">Another Certificate</p>
+                  <p className="text-sm text-gray-300">Issuer</p>
+                  <p className="text-xs text-gray-400 mt-1">Month Year</p>
+                </div>
+
+                <div className="flex flex-row items-start justify-end gap-2">
+                  <a
+                    href="https://verify-link-here"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-600 hover:bg-emerald-500 transition-colors whitespace-nowrap"
+                  >
+                    Verify
+                  </a>
+                  <a
+                    href="https://view-certificate-link-here"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium border border-gray-600 hover:bg-gray-800 transition-colors whitespace-nowrap"
+                  >
+                    View Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+            */}
+          </div>
+        </div>
       </div>
     </section>
   )
