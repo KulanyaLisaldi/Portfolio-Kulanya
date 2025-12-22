@@ -4,6 +4,15 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
+      title: 'Shopify - Sales & Customer Funnel Report Dashboard',
+      Date: 'Dec 2025 - Dec 2025',
+      description:
+        'This repository contains a comprehensive Power BI dashboard that analyzes Shopify sales and customer behavior using data visualization and business intelligence techniques. The dashboard provides insights into revenue trends, sales performance, customer funnel stages, and key performance metrics. It was developed as a self-learning project by following a real-time Power BI Shopify tutorial.',
+      technologies: ['PowerBI', 'Data Analysis'],
+      image: '/Dashboard.png',
+      github: 'https://github.com/KulanyaLisaldi/shopify-powerbi-dashboard',
+    },
+    {
       title: 'Portfolio Website',
       Date: 'Nov 2025 - Dec 2025',
       description:
