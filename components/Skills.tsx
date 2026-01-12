@@ -20,6 +20,7 @@ const Skills = () => {
     'Redis',
     'Postman',
     'R Programming',
+    'Power BI',
   ]
 
   return (
