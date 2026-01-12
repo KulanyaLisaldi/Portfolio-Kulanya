@@ -4,6 +4,15 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
+      title: 'Blinkit - Sales Performance Power BI Dashboard',
+      Date: 'Jan 2026 - Jan 2026',
+      description:
+        'This project explores KPIs, sales trends, outlet segmentation, geographic insights, and item-level performance, helping identify actionable business opportunities.',
+      technologies: ['PowerBI', 'Data Analysis', 'Data Visualization', 'DAX'],
+      image: '/DashboardScreenshot.png',
+      github: 'https://github.com/KulanyaLisaldi/Blinkit-Sales-Performance-Power-BI-Dashboard',
+    },
+    {
       title: 'Shopify - Sales & Customer Funnel Report Dashboard',
       Date: 'Dec 2025 - Dec 2025',
       description:
