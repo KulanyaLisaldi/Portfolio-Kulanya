@@ -4,6 +4,15 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
+      title: 'CampusSync',
+      Date: 'Mar 2026 - Apr 2026',
+      description:
+        'CampusSync is a smart campus operation hub that enables facility booking, resource management, and maintenance ticketing. The system includes role-based access control, workflow automation for service requests, and real-time notifications to improve campus operations efficiency.',
+      technologies: ['React', 'Spring Boot', 'Tailwind CSS', 'MongoDB', 'Git'],
+      image: '/campussync.png',
+      github: 'https://github.com/KulanyaLisaldi/it3030-paf-2026-smart-campus-group-130',
+    },
+    {
       title: 'Blinkit - Sales Performance Power BI Dashboard',
       Date: 'Jan 2026 - Jan 2026',
       description:
